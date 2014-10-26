@@ -53,29 +53,35 @@ subjects <- unique(train_test_merged_filtered[,1])
 # create empty dataset to store the tidy data
 train_test_merged_filtered_averaged <- train_test_merged_filtered[0,]
 
+# load dplyr library to tidy the data
 library(dplyr)
 
+# store the column names
 coltitles <- names(train_test_merged_filtered)
 
+# loop on subjects and activities
 for (s in subjects) {
   for (a in labels_c) {
     subject_activity_data <- filter(train_test_merged_filtered, subject == s, activity == a)
+    # remove the subject and activity columns to average the data
     averages <- colMeans(select(subject_activity_data, -(subject:activity)))
     new_row <- data.frame(matrix(averages, nrow=1))
+    # rebuild the subject and activity columns
     c1 <- c(s)
     c2 <- c(a)
     s_a <- data.frame(c1, c2)
     new_row_df <- cbind(s_a, new_row)
     colnames(new_row_df) <- coltitles
+    # append the row to the new data set
     train_test_merged_filtered_averaged <- rbind(train_test_merged_filtered_averaged, new_row_df)
   }
 }
 
 #sort on the subject name and then on the activity
-train_test_merged_filtered_averaged <- arrange(train_test_merged_filtered_averaged, subject, desc(activity))
+tidy_data <- arrange(train_test_merged_filtered_averaged, subject, desc(activity))
 
 # write the tidy data set to a file
-write.table(train_test_merged_filtered_averaged, "tidy_data_set.txt", row.name = FALSE)
+write.table(tidy_data, "tidy_data_set.txt", row.name = FALSE)
 
 # clean the environment
 rm("test")
@@ -104,3 +110,4 @@ rm("c1")
 rm("c2")
 rm("coltitles")
 rm("averages")
+rm("train_test_merged_filtered_averaged")
