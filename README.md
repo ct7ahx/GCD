@@ -36,7 +36,7 @@ Four files are submitted:
 
 4. "README.md"
 
-### * run_analysis.R
+### run_analysis.R
 R script that transforms the original project data into the resulting tidy data set.
 
 It must be executed in the same directory where the folder with the original data is located.
