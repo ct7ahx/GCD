@@ -33,7 +33,7 @@ Two new variables were added, "subject" and "activity":
 - Activities are identified by a comprehensive name
 
 ### Data
-The resulting data is made available in the form of a txt file ("tidy_data_set.txt" where each line is a record, excluding the first, which has the variables as header names.
+The resulting data is made available in the form of a txt file ("tidy_data_set.txt") where each line is a record, excluding the first, which has the variables as header names.
 
 Each record contains the number of the subject, the activity it was carrying out when the measurement was made and the average of the different measurements mean and standard deviation.
 
