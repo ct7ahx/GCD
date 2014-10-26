@@ -43,3 +43,5 @@ It can be directly imported to R via the read.table function as a data.frame, re
 The first tranformation was the merging of the training and test sets, as well as the association of the subject and activity to each record.
 
 The resulting data was obtained by filtering the existing values in order to only keep the records regarding mean and standard deviation calculations.
+
+Resulting Data: https://github.com/ct7ahx/GCD/blob/master/tidy_data_set.txt
