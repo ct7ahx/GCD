@@ -81,7 +81,7 @@ for (s in subjects) {
 tidy_data <- arrange(train_test_merged_filtered_averaged, subject, desc(activity))
 
 # write the tidy data set to a file
-write.table(tidy_data, "tidy_data_set.txt", row.name = FALSE)
+write.table(tidy_data, file="tidy_data_set.txt", sep= ",", row.names = FALSE)
 
 # clean the environment
 rm("test")
