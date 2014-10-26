@@ -29,7 +29,7 @@ Original Project Data: https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfi
 The original features names were used as column headers for the resulting data set. Their order was kept.
 
 Two new variables were added, "subject" and "activity":
-- Subjects are identified by their name
+- Subjects are identified by their sequence number
 - Activities are identified by a comprehensive name
 
 ### Data
