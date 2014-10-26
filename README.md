@@ -1,4 +1,4 @@
-README for ct7ahx/CGD repository
+README for ct7ahx/GCD repository
 ===
 
 "Getting and Cleaning Data" Coursera Project (run "getdata-008")
